@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorting app</title>
-</head>
-<body>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="main__heading">Sorting app</h1>
+      <form class="sort">
+        <textarea
+          class="sort__input"
+          placeholder="Here paste numbers separated by commas"
+        ></textarea>
+        <div class="btn-wrapper">
+          <button type="button" class="sort__btn">Sort</button>
+          <div class="btn-radio-wrapper">
+            <p>
+              <label class="sort__radio"
+                ><input
+                  type="radio"
+                  value="ascending"
+                  name="order"
+                  id="ascending"
+                  checked
+                />Ascending</label
+              >
+            </p>
+            <p>
+              <label class="sort__radio">
+                <input
+                  type="radio"
+                  value="descending"
+                  name="order"
+                  id="descending"
+                />Descending</label
+              >
+            </p>
+          </div>
+        </div>
+        <textarea class="sort__output" placeholder="Result" readonly></textarea>
+      </form>
+    </main>
     <script src="./js/index.js"></script>
-</body>
+  </body>
 </html>
