@@ -50,11 +50,16 @@ body {
     font-weight: 700;
     border: 0;
     transition: 0.5s background-color;
+
+    &:hover {
+      background-color: rgb(236, 63, 0);
+      cursor: pointer;
+    }
+    &:active {
+      background-color: #c11d00;;
+    }
   }
-  &__btn:hover {
-    background-color: #c11d00;
-    cursor: pointer;
-  }
+
   &__btn:focus,
   &__input:focus,
   &__output:focus {
@@ -83,5 +88,22 @@ body {
 
   & > p {
     margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    max-width: 1000px;
+  }
+
+  .sort {
+    flex-direction: row;
+
+    &__input,
+    &__output {
+      width: 400px;
+      min-height: 250px;
+      font-size: 16px;
+    }
   }
 }
