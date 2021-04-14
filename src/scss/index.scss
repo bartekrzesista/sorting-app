@@ -34,10 +34,12 @@ body {
   &__input,
   &__output {
     width: 100%;
+    max-width: 500px;
     min-height: 200px;
     font-size: 14px;
     border-radius: 16px;
     padding: 16px;
+    align-self: center;
   }
 
   &__btn {
