@@ -1,10 +1,87 @@
-@import './normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+@import "normalize.css";
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #2e2e3a;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.main {
+  max-width: 900px;
+  margin: 70px auto 0 auto;
+
+  &__heading {
+    font-size: 44px;
+    text-align: center;
+    font-weight: 400;
+  }
+}
+.sort {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 150px 0 30px 0;
+
+  &__input,
+  &__output {
+    width: 100%;
+    min-height: 200px;
+    font-size: 14px;
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  &__btn {
+    height: 50px;
+    min-width: 120px;
+    border-radius: 20px;
+    background: coral;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    transition: 0.5s background-color;
+  }
+  &__btn:hover {
+    background-color: #c11d00;
+    cursor: pointer;
+  }
+  &__btn:focus,
+  &__input:focus,
+  &__output:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #7dadd9;
+  }
+
+  &__radio {
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}
+
+.btn-wrapper {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px 0 30px 0;
+}
+
+.btn-radio-wrapper {
+  margin-top: 20px;
+
+  & > p {
+    margin: 0;
+  }
 }
