@@ -16,20 +16,34 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 70px auto 0 auto;
 
   &__heading {
     font-size: 44px;
     text-align: center;
     font-weight: 400;
+    margin-bottom: 150px;
   }
 }
+
+.error-message {
+  width: 100%;
+  max-width: 500px;
+  align-self: center;
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  background-color: red;
+  margin: 0 auto;
+  opacity: 0;
+}
+
 .sort {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 150px 0 30px 0;
+  margin: 20px 0 30px 0;
 
   &__input,
   &__output {
@@ -104,6 +118,9 @@ body {
 
   .sort {
     flex-direction: row;
+
+    &__error-message {
+    }
 
     &__input,
     &__output {
