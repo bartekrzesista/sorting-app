@@ -14,15 +14,16 @@ const regexp = /^((\s*(0|([1-9][0-9]*)))\s*,\s*)+(0|([1-9][0-9]*))\s*$/;
 
 btn.addEventListener("click", () => {
   if (regexp.test(input.value)) {
-    if(errMsg.style.opacity == 1) errMsg.style.opacity = 0;
-
-    const inputData = input.value.split(",").sort(compare);
+    if (errMsg.style.opacity == 1) errMsg.style.opacity = 0;
     if (output.value) output.value = "";
 
-    inputData.forEach((e) => {
-      const result = e.trim();
-      output.value += `${result}\n`;
-    });
+    input.value
+      .split(",")
+      .sort(compare)
+      .forEach((e) => {
+        const result = e.trim();
+        output.value += `${result}\n`;
+      });
   } else {
     errMsg.style.opacity = 1;
   }
